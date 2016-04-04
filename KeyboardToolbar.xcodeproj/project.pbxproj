@@ -8,24 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		3959B3821CB03EFF00B3484A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959B3811CB03EFF00B3484A /* AppDelegate.swift */; };
-		3959B3841CB03EFF00B3484A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959B3831CB03EFF00B3484A /* ViewController.swift */; };
 		3959B3871CB03F0000B3484A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3959B3851CB03F0000B3484A /* Main.storyboard */; };
 		3959B3891CB03F0000B3484A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3959B3881CB03F0000B3484A /* Assets.xcassets */; };
 		3959B38C1CB03F0000B3484A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3959B38A1CB03F0000B3484A /* LaunchScreen.storyboard */; };
+		A513F09A1CB267FB00095654 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513F0971CB267FB00095654 /* CustomButton.swift */; };
+		A513F09E1CB2681C00095654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513F09D1CB2681C00095654 /* ViewController.swift */; };
+		A513F0A01CB2682700095654 /* VIewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513F09F1CB2682700095654 /* VIewControllerExt.swift */; };
+		A513F0A31CB2686600095654 /* ToolbarViewLandscape.xib in Resources */ = {isa = PBXBuildFile; fileRef = A513F0A11CB2686600095654 /* ToolbarViewLandscape.xib */; };
+		A513F0A41CB2686600095654 /* ToolbarViewPortrait.xib in Resources */ = {isa = PBXBuildFile; fileRef = A513F0A21CB2686600095654 /* ToolbarViewPortrait.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3959B37E1CB03EFF00B3484A /* KeyboardToolbar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardToolbar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3959B3811CB03EFF00B3484A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3959B3831CB03EFF00B3484A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3959B3861CB03F0000B3484A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3959B3881CB03F0000B3484A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3959B38B1CB03F0000B3484A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3959B38D1CB03F0000B3484A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3959B3A31CB063D900B3484A /* ToolBar.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ToolBar.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A513F0971CB267FB00095654 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A513F09D1CB2681C00095654 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A513F09F1CB2682700095654 /* VIewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VIewControllerExt.swift; sourceTree = "<group>"; };
+		A513F0A11CB2686600095654 /* ToolbarViewLandscape.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolbarViewLandscape.xib; sourceTree = "<group>"; };
+		A513F0A21CB2686600095654 /* ToolbarViewPortrait.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolbarViewPortrait.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3959B37B1CB03EFF00B3484A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3959B3A01CB063D900B3484A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				3959B37E1CB03EFF00B3484A /* KeyboardToolbar.app */,
+				3959B3A31CB063D900B3484A /* ToolBar.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +71,50 @@
 		3959B3801CB03EFF00B3484A /* KeyboardToolbar */ = {
 			isa = PBXGroup;
 			children = (
+				A513F07F1CB266D500095654 /* Extension */,
+				A513F0821CB266D500095654 /* Controller */,
+				A513F0851CB266D500095654 /* Views */,
+				A513F08A1CB266D500095654 /* Custom Class */,
 				3959B3811CB03EFF00B3484A /* AppDelegate.swift */,
-				3959B3831CB03EFF00B3484A /* ViewController.swift */,
 				3959B3851CB03F0000B3484A /* Main.storyboard */,
 				3959B3881CB03F0000B3484A /* Assets.xcassets */,
 				3959B38A1CB03F0000B3484A /* LaunchScreen.storyboard */,
 				3959B38D1CB03F0000B3484A /* Info.plist */,
 			);
 			path = KeyboardToolbar;
+			sourceTree = "<group>";
+		};
+		A513F07F1CB266D500095654 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A513F09F1CB2682700095654 /* VIewControllerExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A513F0821CB266D500095654 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A513F09D1CB2681C00095654 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A513F0851CB266D500095654 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A513F0A11CB2686600095654 /* ToolbarViewLandscape.xib */,
+				A513F0A21CB2686600095654 /* ToolbarViewPortrait.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A513F08A1CB266D500095654 /* Custom Class */ = {
+			isa = PBXGroup;
+			children = (
+				A513F0971CB267FB00095654 /* CustomButton.swift */,
+			);
+			path = "Custom Class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +137,23 @@
 			productReference = 3959B37E1CB03EFF00B3484A /* KeyboardToolbar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3959B3A21CB063D900B3484A /* ToolBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3959B3AB1CB063DB00B3484A /* Build configuration list for PBXNativeTarget "ToolBar" */;
+			buildPhases = (
+				3959B39F1CB063D900B3484A /* Sources */,
+				3959B3A01CB063D900B3484A /* Frameworks */,
+				3959B3A11CB063D900B3484A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToolBar;
+			productName = ToolBar;
+			productReference = 3959B3A31CB063D900B3484A /* ToolBar.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +165,9 @@
 				ORGANIZATIONNAME = Junaid;
 				TargetAttributes = {
 					3959B37D1CB03EFF00B3484A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					3959B3A21CB063D900B3484A = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -113,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				3959B37D1CB03EFF00B3484A /* KeyboardToolbar */,
+				3959B3A21CB063D900B3484A /* ToolBar */,
 			);
 		};
 /* End PBXProject section */
@@ -122,9 +196,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A513F0A41CB2686600095654 /* ToolbarViewPortrait.xib in Resources */,
 				3959B38C1CB03F0000B3484A /* LaunchScreen.storyboard in Resources */,
 				3959B3891CB03F0000B3484A /* Assets.xcassets in Resources */,
+				A513F0A31CB2686600095654 /* ToolbarViewLandscape.xib in Resources */,
 				3959B3871CB03F0000B3484A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3959B3A11CB063D900B3484A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +218,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3959B3841CB03EFF00B3484A /* ViewController.swift in Sources */,
+				A513F0A01CB2682700095654 /* VIewControllerExt.swift in Sources */,
+				A513F09E1CB2681C00095654 /* ViewController.swift in Sources */,
+				A513F09A1CB267FB00095654 /* CustomButton.swift in Sources */,
 				3959B3821CB03EFF00B3484A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3959B39F1CB063D900B3484A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +359,28 @@
 			};
 			name = Release;
 		};
+		3959B3AC1CB063DB00B3484A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ToolBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ErosTech.KeyboardToolbar.ToolBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3959B3AD1CB063DB00B3484A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ToolBar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ErosTech.KeyboardToolbar.ToolBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -286,6 +400,16 @@
 				3959B3921CB03F0000B3484A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3959B3AB1CB063DB00B3484A /* Build configuration list for PBXNativeTarget "ToolBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3959B3AC1CB063DB00B3484A /* Debug */,
+				3959B3AD1CB063DB00B3484A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
