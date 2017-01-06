@@ -16,7 +16,7 @@ extension UIViewController {
         let portraitNib = UIViewController(nibName: "ToolbarViewPortrait", bundle: nil)
         let portraitView = portraitNib.view
         
-        return portraitView
+        return portraitView!
         
     }
     
@@ -24,7 +24,7 @@ extension UIViewController {
         
         let landscapeNib = UIViewController(nibName: "ToolbarViewLandscape", bundle: nil)
         let landscapeView = landscapeNib.view
-        return landscapeView
+        return landscapeView!
         
         
     }

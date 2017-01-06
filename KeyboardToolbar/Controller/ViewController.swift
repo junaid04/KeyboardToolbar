@@ -17,8 +17,6 @@ class ViewController: UIViewController {
     var landView: UIView!
     var interfaceRotation: Bool?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,65 +24,47 @@ class ViewController: UIViewController {
         portView = self.portraitToolbar()
         landView = self.landscapeToolbar()
         
-        let notificationCenter = NSNotificationCenter.defaultCenter()
-        notificationCenter.addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(ViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        txtFld.keyboardAppearance = .Dark
+        txtFld.keyboardAppearance = .dark
         
-        portView.backgroundColor = UIColor.grayColor()
-        landView.backgroundColor = UIColor.grayColor()
-        
-        //portView.alpha = 0.9
-        //landView.alpha = 0.9
-        
+        portView.backgroundColor = UIColor.gray
+        landView.backgroundColor = UIColor.gray
         
     }
     
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
         self.interfaceRotation = false
     }
     
     
-    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
         
         if self.interfaceRotation == true {
             
-            
             txtFld.becomeFirstResponder()
-            
         }
-    }
-    
-    
-    func keyboardWillHide(notification: NSNotification) {
-        
-        txtFld.resignFirstResponder()
-        self.interfaceRotation = true
-        
     }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        
-        if UIDevice.currentDevice().orientation.isLandscape {
+        if UIDevice.current.orientation.isLandscape {
             print("landscape")
-            
             txtFld.inputAccessoryView = landView
-          
-            
-        } else {
+        }
+        else {
             print("portrait")
-            
             txtFld.inputAccessoryView = portView
-            
-            
-            
         }
     }
-
     
+    //MARK: - Notification Selector
+    func keyboardWillHide(_ notification: Notification) {
+        
+        txtFld.resignFirstResponder()
+        self.interfaceRotation = true
+    }
 }
-

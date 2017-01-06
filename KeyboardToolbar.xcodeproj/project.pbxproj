@@ -166,6 +166,7 @@
 				TargetAttributes = {
 					3959B37D1CB03EFF00B3484A = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0810;
 					};
 					3959B3A21CB063D900B3484A = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -345,6 +346,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ErosTech.KeyboardToolbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -356,6 +358,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ErosTech.KeyboardToolbar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
